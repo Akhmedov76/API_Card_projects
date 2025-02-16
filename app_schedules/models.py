@@ -11,6 +11,13 @@ class Schedule(models.Model):
     time = models.TimeField()
     status = models.CharField(max_length=50)
 
+    def __str__(self):
+        return f'{self.user.first_name} - {self.word_card.word}'
+
+    class Meta:
+        verbose_name = 'Schedule'
+        verbose_name_plural = 'Schedules'
+
 
 class Appointment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='appointments')
@@ -21,3 +28,10 @@ class Appointment(models.Model):
     status = models.CharField(max_length=50)
     feedback = models.TextField(blank=True, null=True)
     confirmation_status = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'{self.user.first_name} - {self.appointment_date}'
+
+    class Meta:
+        verbose_name = 'Appointment'
+        verbose_name_plural = 'Appointments'
