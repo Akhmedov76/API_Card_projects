@@ -1,3 +1,14 @@
 from django.contrib import admin
 
-# Register your models here.
+from app_games.models import MiniGame
+
+
+class MiniGameAdmin(admin.ModelAdmin):
+    list_display = ('id', 'game_type', 'team', 'results', 'created_at', 'updated_at', 'is_completed', 'is_winner', 'winner', 'loser')
+    list_filter = ('team', 'created_at', 'updated_at', 'is_completed', 'is_winner')
+    search_fields = ('game_type', 'team__name', 'results')
+    ordering = ('-id',)
+    fields = ('game_type', 'team', 'results', 'created_at', 'updated_at', 'is_completed', 'is_winner', 'winner', 'loser')
+
+
+admin.site.register(MiniGame, MiniGameAdmin)
