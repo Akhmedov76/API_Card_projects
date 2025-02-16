@@ -19,13 +19,32 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    LANGUAGE_CHOICES = [
+        ('uz', 'Uzbek'),
+        ('ru', 'Russian'),
+        ('en', 'English'),
+    ]
+
+    LANGUAGE_LEVEL_CHOICES = [
+        ('A1', 'Beginner'),
+        ('A2', 'Elementary'),
+        ('B1', 'Intermediate'),
+        ('B2', 'Upper-Intermediate'),
+        ('C1', 'Advanced'),
+        ('C2', 'Proficient'),
+    ]
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     birth_date = models.DateField(null=True, blank=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
     role = models.CharField(max_length=50, choices=[('user', 'User'), ('admin', 'Admin')])
-    preferred_language = models.CharField(max_length=50, blank=True, null=True)
+    preferred_language = models.CharField(
+        max_length=50, choices=LANGUAGE_CHOICES, blank=True, null=True
+    )
+    language_level = models.CharField(
+        max_length=2, choices=LANGUAGE_LEVEL_CHOICES, blank=True, null=True
+    )
     bio = models.TextField(blank=True, null=True)
     level = models.IntegerField(default=0)
     is_active = models.BooleanField(default=True)
