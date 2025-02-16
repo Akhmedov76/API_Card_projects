@@ -1,4 +1,4 @@
-# Онлайн So'z Yodlash Platformasi
+# Online So'z Yodlash Platformasi
 
 ## 🎯 Loyihaning Maqsadi
 Ushbu loyiha foydalanuvchilarga yangi so‘zlarni o‘rganishda yordam beruvchi interaktiv platformadir. Foydalanuvchilar jamoalar tuzib, birgalikda so‘zlarni o‘rganishi, test va mini o‘yinlar orqali bilimlarini mustahkamlashi mumkin.
@@ -100,6 +100,6 @@ Loyiha [MIT](LICENSE) litsenziyasi asosida taqdim etiladi.
 
 ### 📩 Aloqa
 Savollaringiz yoki takliflaringiz bo‘lsa, biz bilan bog‘laning:
-📧 Email: example@example.com
-💬 Telegram: @username
+📧 Email: ahmedovj5016@gmail.com
+💬 Telegram: @Perfect_Dev76
 
