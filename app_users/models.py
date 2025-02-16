@@ -20,8 +20,8 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     LANGUAGE_CHOICES = [
-        ('uz', 'Uzbek'),
-        ('ru', 'Russian'),
+        # ('uz', 'Uzbek'),
+        # ('ru', 'Russian'),
         ('en', 'English'),
     ]
 
