@@ -1,49 +1,119 @@
-# So'z Yodlash Platformasi
+Онлайн So'z Yodlash Platformasi
 
-## 🎯 Loyihaning Maqsadi
+🎯 Loyihaning Maqsadi
 
-So'z yodlash uchun mo'ljallangan onlayn platforma. Foydalanuvchilar jamoalar tuzib, birgalikga so'zlarni o'rganadi, testlar va mini o'yinlar orqali bilimlarini mustahkamlaydi.
+Ushbu loyiha foydalanuvchilarga yangi so‘zlarni o‘rganishda yordam beruvchi interaktiv platformadir. Foydalanuvchilar jamoalar tuzib, birgalikda so‘zlarni o‘rganishi, test va mini o‘yinlar orqali bilimlarini mustahkamlashi mumkin.
 
----
+📌 Asosiy Xususiyatlar
 
-## 🎯 Loyihaning Asosiy G'oyasi
+📖 So‘z Kartochkalari
 
-1. **So'z Kartochkalari:**
-    - Har bir so'z kartochka shaklida ko'rsatiladi (so'z, tarjima, misol).
-    - O'qituvchi yoki talaba yangi so'z qo'shganda, barcha jamoa a'zolarida bu so'z paydo bo'ladi. (o’yalb ko’rish kerak agar talaba jamoa uchun so’z qo’shsa uni o’qituvchi tasdiqlash kerakdir)
-    - Foydalanuvchi o'zi uchun shaxsiy so'z kartochkalari yaratishi mumkin. Ushbu kartalar faqat o'sha foydalanuvchi uchun ko'rinadi va jamoa bilan ulashilmaydi.shunda so’zlarning yana bir turi hosil bo’ladi (personal (shaxsiy), teams (jamoaviy))
-    - Kartochga o’ngga va chapga suruladi va har bir surulgani o’zling yodlanganligni qisman bildiradi .
-        
-                    o’nga surulsa bildim 
-        
-                    chapga surulsa bilmadim
-        
-        har bir surulganida so’zning holat o’zgaradi  yani biliish yodalnganliik darajasi ortadi va so’z keyingi safar qachon interfasega chiqish level belgilandadi.
-        
-        - shunda o’zlar 3 ta statusga bo’linadi
-            
-            
-            to learn 
-            
-            known
-            
-            learned
-            
-    
-2. **Jamoaviy O'rganish:**
-    - Foydalanuvchilar jamoalar tuzadi yoki mavjud jamoalarga qo'shiladi.(jamoa tuzgan profil teacher avtarizatsiyasida bo’ladi)
-    - Jamoa a'zolari yangi so'zlarni o'rganadi va muhokama qiladi.
-3. **Testlar va Mini O'yinlar:**
-    - **Yakka O'yinlar:** Foydalanuvchi mustaqil o'rganish davomida chiqib cardalarni aynalrayotganida avtamatik chiqadi masalan tarjimaso bilan so’zlarni bog’ash , …. .
-    - **Jamoaviy O'yinlar:** Jamoa a'zolari birga test yechadi yoki mini o'yinlarda ishtirok etadi bularning barchasi compiation ga o’xshab o’tkazilish kerak.
-4. **Reyting va Kuzatuv:**
-    - Faol foydalanuvchi uchun reyting tizimi.
-    - Jamoa natijalari va faoliyat statistikasi(teacher avtarizatsiyasi uchun ko’rinadi).
-5. **O’rgangan so’zlarida foydalanaib text tuzish va  context orqali tushuntrishga harakat qilish:**
-    - ….
-6. **Har bir Shaxsiy Profil Nazorati:**
-- Foydalanuvchining o'rganish jarayoni doimiy ravishda kuzatiladi.
-- Platforma foydalanuvchi o'qish jarayonini motivatsion tarzda baholaydi.
-- Masalan, kam shug'ullangan kunlari platforma vizual tarzda hafalik his-tuyg'ularni aks ettiradi. Ko'p shug'ullangan kunlari esa foydalanuvchini rag'batlantiruvchi xabarlar va vizuallar ko'rsatiladi.
-    
-    Maqsad: foydalanuvchini doimiy ravishda o'rganishga undash.
+Har bir so‘z kartochka shaklida ko‘rsatiladi (so‘z, tarjima, misol bilan).
+
+Jamoaviy so‘zlar: O‘qituvchi yoki talaba yangi so‘z qo‘shganda, barcha jamoa a’zolarida ushbu so‘z paydo bo‘ladi.
+
+Agar talaba jamoa uchun so‘z qo‘shsa, o‘qituvchi tasdiqlashi talab qilinishi mumkin.
+
+Shaxsiy so‘zlar: Foydalanuvchilar shaxsiy kartochkalar yaratishi mumkin. Ushbu so‘zlar faqat o‘sha foydalanuvchi uchun ko‘rinadi.
+
+So‘zlar 3 ta toifaga bo‘linadi:
+
+To Learn – hali o‘rganilmagan so‘zlar.
+
+Known – bilish jarayonida bo‘lgan so‘zlar.
+
+Learned – yod olingan va mustahkamlangan so‘zlar.
+
+So‘zlarni chapga va o‘ngga surish orqali yodlash jarayoni nazorat qilinadi:
+
+O‘ngga surish – "Bildim" ✅
+
+Chapga surish – "Bilamadim" ❌
+
+👥 Jamoaviy O‘rganish
+
+Foydalanuvchilar jamoalar tuzishi yoki mavjud jamoalarga qo‘shilishi mumkin.
+
+Jamoa a’zolari yangi so‘zlarni muhokama qiladi va birga o‘rganadi.
+
+Jamoani yaratgan profil o‘qituvchi (teacher) sifatida belgilanadi.
+
+🎮 Testlar va Mini O‘yinlar
+
+Yakka tartibdagi o‘yinlar: Foydalanuvchilar individual so‘z o‘rganish jarayonida mini o‘yinlarni bajaradi (masalan, tarjima bilan so‘zlarni bog‘lash).
+
+Jamoaviy o‘yinlar: Jamoa a’zolari musobaqa (competition) tarzida testlar va mini o‘yinlarda ishtirok etadi.
+
+📊 Reyting va Kuzatuv
+
+Faol foydalanuvchilar uchun reyting tizimi.
+
+Jamoa natijalari va statistikasi (bu ma’lumotlar faqat o‘qituvchilar uchun ochiq bo‘lishi mumkin).
+
+✍️ So‘zlarni Kontekstda Ishlatish
+
+O‘rganilgan so‘zlarni matn yaratishda ishlatish.
+
+So‘zlarning kontekst orqali tushunilishi uchun maxsus topshiriqlar.
+
+📅 Shaxsiy Profil Nazorati
+
+Har bir foydalanuvchining o‘rganish jarayoni kuzatiladi.
+
+Platforma foydalanuvchini motivatsiya qilish uchun vizuallar va xabarlar beradi:
+
+Kam shug‘ullangan kunlari – ogohlantirishlar.
+
+Faol kunlar – rag‘batlantiruvchi xabarlar.
+
+🚀 O‘rnatish va Ishga Tushirish
+
+Talablar:
+
+Python 3+
+
+Django
+
+PostgreSQL
+
+O‘rnatish:
+
+Repozitoriyani klonlash:
+
+git clone https://github.com/username/project.git
+cd project
+
+Virtual muhit yaratish va kerakli kutubxonalarni o‘rnatish:
+
+python -m venv venv
+source venv/bin/activate  # Windows foydalanuvchilari: venv\Scripts\activate
+pip install -r requirements.txt
+
+Ma’lumotlar bazasini sozlash va migratsiyalarni bajarish:
+
+python manage.py migrate
+
+Serverni ishga tushirish:
+
+python manage.py runserver
+
+🤝 Hissa Qo‘shish
+
+Agar loyihaga hissa qo‘shmoqchi bo‘lsangiz, quyidagi bosqichlarni bajaring:
+
+Fork qiling.
+
+O‘zgarishlarni bajaring.
+
+Pull Request yuboring.
+
+📜 Litsenziya
+
+Loyiha MIT litsenziyasi asosida taqdim etiladi.
+
+📩 Aloqa
+
+Savollaringiz yoki takliflaringiz bo‘lsa, biz bilan bog‘laning:
+📧 Email: example@example.com
+💬 Telegram: @username
+
