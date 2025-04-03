@@ -38,7 +38,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(max_length=100)
     birth_date = models.DateField(null=True, blank=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
-    role = models.CharField(max_length=50, choices=[('user', 'User'), ('admin', 'Admin')], default='user')
+    role = models.CharField(
+        max_length=50, 
+        choices=[
+            ('user', 'User'), 
+            ('teacher', 'Teacher')], 
+            default='user')
     preferred_language = models.CharField(
         max_length=50, choices=LANGUAGE_CHOICES, blank=True, null=True
     )
@@ -61,3 +66,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = "User"
         verbose_name_plural = "Users"
+
+    def is_teacher(self):
+        return self.role == "teacher"
