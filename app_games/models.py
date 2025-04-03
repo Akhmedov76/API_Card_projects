@@ -4,15 +4,16 @@ from app_teams.models import Team
 
 
 class MiniGame(models.Model):
+    objects = None
     game_type = models.CharField(max_length=100)
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='mini_games')
-    results = models.TextField()
+    results = models.JSONField(default=dict)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_completed = models.BooleanField(default=False)
     is_winner = models.BooleanField(default=False)
-    winner = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='winning_mini_games', null=True)
-    loser = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='losing_mini_games', null=True)
+    winner = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='winning_mini_games', null=True, blank=True)
+    loser = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='losing_mini_games', null=True, blank=True)
 
     def __str__(self):
         return f'{self.game_type} - {self.team.name}'

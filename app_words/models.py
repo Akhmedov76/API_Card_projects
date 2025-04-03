@@ -5,6 +5,14 @@ from app_users.models import User
 
 
 class WordCard(models.Model):
+
+    STATUS_CHOICES = [
+        ('to_learn', 'To Learn'),
+        ('known', 'Known'),
+        ('learned', 'Learned'),
+    ]
+
+
     word = models.CharField(max_length=100)
     translation = models.CharField(max_length=100)
     example = models.TextField()

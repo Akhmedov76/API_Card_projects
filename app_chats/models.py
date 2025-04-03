@@ -16,3 +16,4 @@ class Chat(models.Model):
     class Meta:
         verbose_name = 'Chat'
         verbose_name_plural = 'Chats'
+        ordering = ['-is_read', '-timestamp']
