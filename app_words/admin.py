@@ -1,23 +1,17 @@
 from django.contrib import admin
+from .models import WordCard, PrivateCard
 
-from app_words.models import WordCard, PrivateCard
-
-
+@admin.register(WordCard)
 class WordCardAdmin(admin.ModelAdmin):
-    list_display = ('id', 'word', 'translation', 'example', 'team')
+    list_display = ('id', 'word', 'translation', 'team', 'created_at', 'updated_at')
     list_filter = ('team',)
-    search_fields = ('word', 'translation', 'example')
-    ordering = ('-id',)
-    fields = ('word', 'translation', 'example', 'team')
+    search_fields = ('word', 'translation')
+    ordering = ('-created_at',)
 
 
+@admin.register(PrivateCard)
 class PrivateCardAdmin(admin.ModelAdmin):
-    list_display = ('id', 'word', 'translation', 'description', 'user')
-    list_filter = ('user',)
+    list_display = ('id', 'word', 'translation', 'user', 'status', 'created_at')
+    list_filter = ('status', 'user')
     search_fields = ('word', 'translation', 'description')
-    ordering = ('-id',)
-    fields = ('word', 'translation', 'description', 'user')
-
-
-admin.site.register(WordCard, WordCardAdmin)
-admin.site.register(PrivateCard, PrivateCardAdmin)
+    ordering = ('-created_at',)

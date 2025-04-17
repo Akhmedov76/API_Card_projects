@@ -22,7 +22,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'django_filters',
-    # Apps
     "app_users",
     'app_chats',
     'app_games',
@@ -30,7 +29,7 @@ INSTALLED_APPS = [
     'app_payments',
     'app_schedules',
     'app_teams',
-    'app_words'
+    'app_words',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +82,7 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),
     }
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 

@@ -1,14 +1,19 @@
 from django.contrib import admin
+from .models import Chat, ChatMessage
 
-from app_chats.models import Chat
-
-
+@admin.register(Chat)
 class ChatAdmin(admin.ModelAdmin):
-    list_display = ('id', 'sender', 'receiver', 'message', 'timestamp', 'is_read')
-    list_filter = ('sender', 'receiver', 'timestamp', 'is_read')
-    search_fields = ('sender__email', 'receiver__email', 'message')
-    ordering = ('-id',)
-    fields = ('sender', 'receiver', 'message', 'timestamp', 'is_read')
+    list_display = ('id', 'user1', 'user2', 'created_at')
+    search_fields = ('user1', 'user2')
+    ordering = ('-created_at',)
 
 
-admin.site.register(Chat, ChatAdmin)
+@admin.register(ChatMessage)
+class ChatMessageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'chat', 'sender', 'short_message', 'file', 'created_at')
+    search_fields = ('message', 'sender__username', 'chat__user1', 'chat__user2')
+    ordering = ('-created_at',)
+
+    def short_message(self, obj):
+        return obj.message[:30] + ('...' if len(obj.message) > 30 else '')
+    short_message.short_description = 'Message'

@@ -1,5 +1,6 @@
 from django.db import models
 
+import app_words.models
 from app_users.models import User
 from app_words.models import WordCard
 

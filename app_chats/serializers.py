@@ -2,7 +2,7 @@ from .models import *
 from rest_framework import serializers
 
 
-class ChatSerialize(serializers.ModelSerializer):
+class ChatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Chat
         fields = '__all__'
